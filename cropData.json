@@ -1,0 +1,21 @@
+{
+    "Wheat": {
+      "seeds": 1200,
+      "fertilizer": 800,
+      "labour": 1500,
+      "irrigation": 700
+    },
+    "Rice": {
+      "seeds": 1500,
+      "fertilizer": 1000,
+      "labour": 1600,
+      "irrigation": 900
+    },
+    "Maize": {
+      "seeds": 1100,
+      "fertilizer": 700,
+      "labour": 1300,
+      "irrigation": 600
+    }
+  }
+  

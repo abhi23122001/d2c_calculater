@@ -1,0 +1,212 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  position: relative;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  overflow-x: hidden;
+}
+
+/* ===== Animated Background ===== */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(270deg, #a1c4fd, #c2e9fb, #d4fc79, #96e6a1);
+  background-size: 800% 800%;
+  animation: backgroundWave 20s ease infinite;
+}
+
+@keyframes backgroundWave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Calculator Card ===== */
+.calculator-card {
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  color: #333;
+}
+
+/* ===== Headings ===== */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ===== Labels & Inputs ===== */
+label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 600;
+}
+
+select, input[type="number"], input[type="range"] {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* ===== Button Styling ===== */
+button {
+  background: #29b6f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background: #0288d1;
+  transform: scale(1.05);
+}
+
+/* ===== Chart Section ===== */
+#costChart {
+  margin: 1rem 0;
+}
+
+/* ===== Output Text ===== */
+#costOutput, #profitOutput {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1b5e20;
+}
+
+/* ===== Chart Actions ===== */
+.chart-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* ===== Theme/Language Toggles ===== */
+.theme-language-controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+/* ===== Toggle Switch Style ===== */
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.toggle-switch input:checked + .slider {
+  background-color: #26c6da;
+}
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* ===== Toggle Labels ===== */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+/* ===== Dark Mode ===== */
+body.dark {
+  background: linear-gradient(135deg, #212121, #37474f);
+  color: #e0f2f1;
+}
+
+body.dark .calculator-card {
+  background: rgba(38, 50, 56, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e0f2f1;
+}
+
+body.dark button {
+  background: #00bfa5;
+}
+body.dark button:hover {
+  background: #00695c;
+}
+body.dark input,
+body.dark select {
+  background: #455a64;
+  color: #fff;
+  border: 1px solid #607d8b;
+}
+body.dark .slider {
+  background-color: #555;
+}
+body.dark .toggle-switch input:checked + .slider {
+  background-color: #4db6ac;
+}
+
+
+#background-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: transparent;
+}

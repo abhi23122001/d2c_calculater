@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌾 Krishi Cost Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.css" />
+
+</head>
+<body>
+<canvas id="background-particles"></canvas>
+
+
+  <div class="theme-language-controls">
+    <button id="themeToggle">🌗 Toggle Theme</button>
+    <button id="languageToggle">🌐 हिंदी/English</button>
+    <button id="exportPDF">📤 Export PDF</button>
+  </div>
+
+  <div class="calculator-card">
+    <h1 id="title">🌾 Krishi Cost Calculator</h1>
+
+    <!-- Crop Selection -->
+    <label for="cropSelect" id="labelCrop">Select Crop</label>
+    <select id="cropSelect"></select>
+
+    <!-- Land Area -->
+    <label for="landRange" id="labelLand">Land Area (Acres): <span id="landValue">1</span></label>
+    <input type="range" id="landRange" min="1" max="100" value="1" />
+
+    <!-- Calculate Button -->
+    <button id="calculateBtn">Calculate Cost</button>
+
+    <!-- Output -->
+    <div id="costOutput"></div>
+
+    <!-- Chart -->
+    <canvas id="costChart" width="400" height="200"></canvas>
+
+    <!-- Profit Section -->
+    <div id="profitSection">
+      <label for="mandiRate" id="labelMandi">Estimated Mandi Rate (₹ per acre):</label>
+      <input type="number" id="mandiRate" value="10000" />
+      <div id="profitOutput"></div>
+    </div>
+
+    <!-- Chart Actions -->
+    <div class="chart-actions">
+      <button id="copyChart">📋 Copy Chart</button>
+      <button id="downloadChart">⬇️ Download Chart</button>
+      <button id="printChart">🖨️ Print Chart</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.legacy.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

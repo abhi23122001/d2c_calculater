@@ -1,0 +1,20 @@
+const cropData = {
+  wheat: {
+    seed: 1200,
+    chemical: 800,
+    labour: 1500,
+    irrigation: 1000,
+  },
+  rice: {
+    seed: 1000,
+    chemical: 900,
+    labour: 1600,
+    irrigation: 1200,
+  },
+  sugarcane: {
+    seed: 1500,
+    chemical: 1000,
+    labour: 1800,
+    irrigation: 1500,
+  }
+};
